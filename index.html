@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock-Paper-Scissors</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+      <script>
+        var humanScore, computerScore = 0;
+
+        function getComputerChoice(){
+            var randomNumber = Math.random() * 4;
+            var chosenOptionComputer;
+            if(randomNumber <= 1.0){
+                chosenOptionComputer = "rock";
+            }
+            else if(randomNumber > 1.0 && randomNumber < 2.0){
+                chosenOptionComputer = "paper";
+            }
+            else if(randomNumber >= 2.0){
+                chosenOptionComputer = "scissors"
+            }
+            return chosenOptionComputer;
+        }
+
+        function getHumanChoice(){
+            console.log("Welcome! Let's play. \nchoose: paper, rock or scissors");
+            var chosenOptionHuman = prompt("Welcome! Let's play. \nchoose: paper, rock or scissors");
+            return chosenOptionHuman;
+        }
+
+        function playRound(humanChoice = "", computerChoice = ""){
+              var h = humanChoice.toLowerCase();
+              var c = computerChoice.toLowerCase();
+              var result = h.concat(" ", c);
+              
+              switch(result){
+                case "rock paper":
+                    console.log("You lose! Paper beats Rock");
+                    computerScore ++;
+              }
+        }
+
+        var humanSelection = getHumanChoice();
+        var computerSelection = getComputerChoice();
+
+        
+        console.log(playRound(humanSelection, computerSelection));
+      </script>
+    </body>
+</html>
