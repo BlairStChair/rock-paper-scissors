@@ -69,8 +69,10 @@
 
         if(humanScore > computerScore){
             console.log("You are the winner! c:");
-        }else{
+        }else if(humanScore < computerScore){
             console.log("You have lost! :c");
+        }else if(humanScore == computerScore){
+            console.log("Draw! No one wins ;-;")
         }
         }
 
