@@ -26,53 +26,58 @@ computerResultDiv.classList.add("computerResultDiv");
 const resultDiv = document.createElement("div");
 resultDiv.classList.add("resultDiv");
 
+const hScore = document.createElement("p");
+hScore.classList.add("hScore");
+
+const cScore = document.createElement("p");
+cScore.classList.add("cScore");
+
 function playGame(){
+    var x = humanChoice.toLowerCase();
+    var y = getComputerChoice().toLowerCase();
 
-    humanResultDiv.textContent = "";
-    computerResultDiv.textContent = "";
-    resultDiv.textContent = "";
+    var result = x.concat(" ", y);
 
-    var x = humanChoice;
-    var y = getComputerChoice();
+    humanResultDiv.textContent = "You chose: " + x;
+    choices.appendChild(humanResultDiv);
 
-    var h = x.toLowerCase();
-    var c = y.toLowerCase();
-    var result = h.concat(" ", c);
-
-    humanResultDiv.textContent = "You chose: " + h;
-    container.appendChild(humanResultDiv);
-
-    computerResultDiv.textContent = "Computer chose: " + c;
-    container.appendChild(computerResultDiv); 
+    computerResultDiv.textContent = "Computer chose: " + y;
+    choices.appendChild(computerResultDiv); 
 
     if(result == 'rock paper'){
         resultDiv.textContent = "You lose! Paper beats Rock";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'rock scissors'){
         resultDiv.textContent = "You win! Rock beats Scissors";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         humanScore ++;
     }else if(result == 'paper rock'){
         resultDiv.textContent = "You win! Paper beats Rock";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         humanScore ++;
     }else if(result == 'paper scissors'){
         resultDiv.textContent = "You lose! Scissors beats Paper";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'scissors rock'){
         resultDiv.textContent = "You lose! Rock beats Scissors";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'scissors paper'){
         resultDiv.textContent = "You win! Scissors beats Paper";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
         humanScore ++;
     }else{
         resultDiv.textContent = "You get the same option! No one wins!";
-        container.appendChild(resultDiv);
+        choices.appendChild(resultDiv);
     }
+
+    hScore.textContent = humanScore;
+    playerScore.appendChild(hScore);
+
+    cScore.textContent = computerScore;
+    machineScore.appendChild(cScore);
 
     if(humanScore == 5 || computerScore == 5){
         endGame();
@@ -80,17 +85,17 @@ function playGame(){
 }
 
 function endGame(){
-    finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
-    container.appendChild(finalScoreDiv);
+    finalScoreDiv.textContent = "The game is over!";
+    endOfGameResult.appendChild(finalScoreDiv);
 
     const winnerOrNotDiv = document.createElement("div");
     winnerOrNotDiv.classList.add("winnerOrNotDiv");
 
     if (humanScore > computerScore) {
-        winnerOrNotDiv.textContent = "You are the winner! c:";
+        winnerOrNotDiv.textContent = "You are the winner!";
         container.appendChild(winnerOrNotDiv);
     } else {
-        winnerOrNotDiv.textContent = "You have lost! :c";
+        winnerOrNotDiv.textContent = "You have lost!";
         container.appendChild(winnerOrNotDiv);
     }
 
@@ -104,6 +109,11 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
 const container = document.querySelector("#container");
+const choices = document.querySelector("#choices");
+const score = document.querySelector("score");
+const playerScore = document.querySelector("#playerScore");
+const machineScore = document.querySelector("#machineScore");
+const endOfGameResult = document.querySelector("#endOfGameResult");
 
 var humanChoice = "";
 
