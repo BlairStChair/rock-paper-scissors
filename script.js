@@ -17,8 +17,20 @@ function getComputerChoice(){
 var humanScore = 0;
 var computerScore = 0;
 
+const humanResultDiv = document.createElement("div");
+humanResultDiv.classList.add("humanResultDiv");
+
+const computerResultDiv = document.createElement("div");
+computerResultDiv.classList.add("computerResultDiv");
+
+const resultDiv = document.createElement("div");
+resultDiv.classList.add("resultDiv");
+
 function playGame(){
 
+    humanResultDiv.textContent = "";
+    computerResultDiv.textContent = "";
+    resultDiv.textContent = "";
 
     var x = humanChoice;
     var y = getComputerChoice();
@@ -27,18 +39,11 @@ function playGame(){
     var c = y.toLowerCase();
     var result = h.concat(" ", c);
 
-    const humanResultDiv = document.createElement("div");
-    humanResultDiv.classList.add("humanResultDiv");
     humanResultDiv.textContent = "You chose: " + h;
     container.appendChild(humanResultDiv);
 
-    const computerResultDiv = document.createElement("div");
-    computerResultDiv.classList.add("computerResultDiv");
     computerResultDiv.textContent = "Computer chose: " + c;
     container.appendChild(computerResultDiv); 
-
-    const resultDiv = document.createElement("div");
-    resultDiv.classList.add("resultDiv");
 
     if(result == 'rock paper'){
         resultDiv.textContent = "You lose! Paper beats Rock";
@@ -68,27 +73,7 @@ function playGame(){
         resultDiv.textContent = "You get the same option! No one wins!";
         container.appendChild(resultDiv);
     }
-
-    const finalScoreDiv = document.createElement("div");
-    finalScoreDiv.classList.add("finalScoreDiv");
-    finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
-    container.appendChild(finalScoreDiv);
-
-    const winnerOrNotDiv = document.createElement("div");
-    winnerOrNotDiv.classList.add("winnerOrNotDiv");
-
-    if(humanScore > computerScore){
-        winnerOrNotDiv.textContent = "You are the winner! c:";
-        container.appendChild(winnerOrNotDiv);
-    }else if(humanScore < computerScore){
-        winnerOrNotDiv.textContent = "You have lost! :c";
-        container.appendChild(winnerOrNotDiv);
-    }else if(humanScore == computerScore){
-        winnerOrNotDiv.textContent = "Draw! No one wins ;-;";
-        container.appendChild(winnerOrNotDiv);
-    }
 }
-
 
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
@@ -98,21 +83,83 @@ const container = document.querySelector("#container");
 
 var humanChoice = "";
 
+const finalScoreDiv = document.createElement("div");
+finalScoreDiv.classList.add("finalScoreDiv");
+
 rock.addEventListener("click", () => {
     humanChoice = "rock";
+
     do{
     playGame();
     }while(humanScore > 5 || computerScore > 5);
+
+    if(humanScore == 5 || computerScore == 5){
+        finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
+        container.appendChild(finalScoreDiv);
+
+        const winnerOrNotDiv = document.createElement("div");
+        winnerOrNotDiv.classList.add("winnerOrNotDiv");
+
+        if(humanScore > computerScore){
+           winnerOrNotDiv.textContent = "You are the winner! c:";
+           container.appendChild(winnerOrNotDiv);
+        }else if(humanScore < computerScore){
+           winnerOrNotDiv.textContent = "You have lost! :c";
+           container.appendChild(winnerOrNotDiv);
+        }else if(humanScore == computerScore){
+           winnerOrNotDiv.textContent = "Draw! No one wins ;-;";
+           container.appendChild(winnerOrNotDiv);
+        }
+        }
 });
 paper.addEventListener("click", () => {
     humanChoice = "paper";
+
     do{
         playGame();
         }while(humanScore > 5 || computerScore > 5);
+    if(humanScore == 5 || computerScore == 5){
+        finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
+        container.appendChild(finalScoreDiv);
+
+        const winnerOrNotDiv = document.createElement("div");
+        winnerOrNotDiv.classList.add("winnerOrNotDiv");
+
+        if(humanScore > computerScore){
+           winnerOrNotDiv.textContent = "You are the winner! c:";
+           container.appendChild(winnerOrNotDiv);
+        }else if(humanScore < computerScore){
+           winnerOrNotDiv.textContent = "You have lost! :c";
+           container.appendChild(winnerOrNotDiv);
+        }else if(humanScore == computerScore){
+           winnerOrNotDiv.textContent = "Draw! No one wins ;-;";
+           container.appendChild(winnerOrNotDiv);
+        }
+        }
 });
 scissors.addEventListener("click", () => {
     humanChoice = "scissors";
+
     do{
         playGame();
         }while(humanScore > 5 || computerScore > 5);
+    if(humanScore == 5 || computerScore == 5){
+        finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
+        container.appendChild(finalScoreDiv);
+
+        const winnerOrNotDiv = document.createElement("div");
+        winnerOrNotDiv.classList.add("winnerOrNotDiv");
+
+        if(humanScore > computerScore){
+          winnerOrNotDiv.textContent = "You are the winner! c:";
+          container.appendChild(winnerOrNotDiv);
+        }else if(humanScore < computerScore){
+          winnerOrNotDiv.textContent = "You have lost! :c";
+          container.appendChild(winnerOrNotDiv);
+        }else if(humanScore == computerScore){
+          winnerOrNotDiv.textContent = "Draw! No one wins ;-;";
+          container.appendChild(winnerOrNotDiv);
+        }
+        }
 });
+
