@@ -25,39 +25,65 @@ function playRound(){
     var c = y.toLowerCase();
     var result = h.concat(" ", c);
 
-    console.log("You chose: " + h);
-    console.log("Computer chose: " + c);
+    const humanResultDiv = document.createElement("div");
+    humanResultDiv.classList.add("humanResultDiv");
+    humanResultDiv.textContent = "You chose: " + h;
+    container.appendChild(humanResultDiv);
+
+    const computerResultDiv = document.createElement("div");
+    computerResultDiv.classList.add("computerResultDiv");
+    computerResultDiv.textContent = "Computer chose: " + c;
+    container.appendChild(computerResultDiv); 
+
+    const resultDiv = document.createElement("div");
+    resultDiv.classList.add("resultDiv");
 
     if(result == 'rock paper'){
-        console.log("You lose! Paper beats Rock");
+        resultDiv.textContent = "You lose! Paper beats Rock";
+        container.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'rock scissors'){
-        console.log("You win! Rock beats Scissors");
+        resultDiv.textContent = "You win! Rock beats Scissors";
+        container.appendChild(resultDiv);
         humanScore ++;
     }else if(result == 'paper rock'){
-        console.log("You win! Paper beats Rock");
+        resultDiv.textContent = "You win! Paper beats Rock";
+        container.appendChild(resultDiv);
         humanScore ++;
     }else if(result == 'paper scissors'){
-        console.log("You lose! Scissors beats Paper");
+        resultDiv.textContent = "You lose! Scissors beats Paper";
+        container.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'scissors rock'){
-        console.log("You lose! Rock beats Scissors");
+        resultDiv.textContent = "You lose! Rock beats Scissors";
+        container.appendChild(resultDiv);
         computerScore ++;
     }else if(result == 'scissors paper'){
-        console.log("You win! Scissors beats Paper");
+        resultDiv.textContent = "You win! Scissors beats Paper";
+        container.appendChild(resultDiv);
         humanScore ++;
     }else{
-        console.log("You get the same option! No one wins!")
+        resultDiv.textContent = "You get the same option! No one wins!";
+        container.appendChild(resultDiv);
     }
 
-    console.log("The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore);
+    const finalScoreDiv = document.createElement("div");
+    finalScoreDiv.classList.add("finalScoreDiv");
+    finalScoreDiv.textContent = "The game is over!\nYour score: " + humanScore + "\nComputer score: " + computerScore;
+    container.appendChild(finalScoreDiv);
+
+    const winnerOrNotDiv = document.createElement("div");
+    winnerOrNotDiv.classList.add("winnerOrNotDiv");
 
     if(humanScore > computerScore){
-    console.log("You are the winner! c:");
+        winnerOrNotDiv.textContent = "You are the winner! c:";
+        container.appendChild(winnerOrNotDiv);
     }else if(humanScore < computerScore){
-    console.log("You have lost! :c");
+        winnerOrNotDiv.textContent = "You have lost! :c";
+        container.appendChild(winnerOrNotDiv);
     }else if(humanScore == computerScore){
-    console.log("Draw! No one wins ;-;")
+        winnerOrNotDiv.textContent = "Draw! No one wins ;-;";
+        container.appendChild(winnerOrNotDiv);
     }
 }
 
@@ -65,6 +91,8 @@ function playRound(){
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+
+const container = document.querySelector("#container");
 
 var humanChoice = "";
 
