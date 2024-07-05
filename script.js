@@ -14,18 +14,11 @@ function getComputerChoice(){
     return chosenOptionComputer;
 }
 
-function getHumanChoice(){
-    var chosenOptionHuman = prompt("Welcome! Let's play. \nchoose: paper, rock or scissors");
-    return chosenOptionHuman;
-}
-
-
 function playRound(){
     var humanScore = 0;
     var computerScore = 0;
-    
 
-    var x = getHumanChoice();
+    var x = humanChoice;
     var y = getComputerChoice();
 
     var h = x.toLowerCase();
@@ -68,4 +61,22 @@ function playRound(){
     }
 }
 
-playRound();
+
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+var humanChoice = "";
+
+rock.addEventListener("click", () => {
+    humanChoice = "rock";
+    playRound();
+});
+paper.addEventListener("click", () => {
+    humanChoice = "paper";
+    playRound();
+});
+scissors.addEventListener("click", () => {
+    humanChoice = "scissors";
+    playRound();
+});
