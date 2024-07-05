@@ -14,9 +14,11 @@ function getComputerChoice(){
     return chosenOptionComputer;
 }
 
-function playRound(){
-    var humanScore = 0;
-    var computerScore = 0;
+var humanScore = 0;
+var computerScore = 0;
+
+function playGame(){
+
 
     var x = humanChoice;
     var y = getComputerChoice();
@@ -98,13 +100,19 @@ var humanChoice = "";
 
 rock.addEventListener("click", () => {
     humanChoice = "rock";
-    playRound();
+    do{
+    playGame();
+    }while(humanScore > 5 || computerScore > 5);
 });
 paper.addEventListener("click", () => {
     humanChoice = "paper";
-    playRound();
+    do{
+        playGame();
+        }while(humanScore > 5 || computerScore > 5);
 });
 scissors.addEventListener("click", () => {
     humanChoice = "scissors";
-    playRound();
+    do{
+        playGame();
+        }while(humanScore > 5 || computerScore > 5);
 });
