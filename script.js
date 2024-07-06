@@ -93,9 +93,11 @@ function endGame(){
 
     if (humanScore > computerScore) {
         winnerOrNotDiv.textContent = "You are the winner!";
+        winnerOrNotDiv.style.color = "green";
         container.appendChild(winnerOrNotDiv);
     } else {
         winnerOrNotDiv.textContent = "You have lost!";
+        winnerOrNotDiv.style.color = "red";
         container.appendChild(winnerOrNotDiv);
     }
 
