@@ -1,0 +1,83 @@
+[33mcommit 48d6a8551a0570d8aafdd8c7e133b3362ca901cb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 17:06:52 2024 +0200
+
+    Did finishing touches to HTML and JS file. Now I have to work on looks of the game!
+
+[33mcommit 4fcbf62e1310795a70aea459fa193e34c06b6223[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 16:48:09 2024 +0200
+
+    Prepared HTML file for making the game look a bit nicer
+
+[33mcommit 867488ffd8135af5c401ae67af911295eef0b76c[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 16:39:30 2024 +0200
+
+    Finished fixing bug with infinite game loop
+
+[33mcommit 22014d8a325d9a9c2927f66191b6a4f47989fffe[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 16:34:17 2024 +0200
+
+    Finished game, but still need to fix some bugs
+
+[33mcommit e6b097a7654005c5dc07ac26e82c01d0c41ea4f8[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 16:06:34 2024 +0200
+
+    Now game ends after gaining 5 points
+
+[33mcommit e23db2c89ea441d50bf5887e0a21e2031cd9eff2[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 14:39:49 2024 +0200
+
+    Changed console.log to div message
+
+[33mcommit 38318c785c44794b9d7234e89f3306ee2d56c7ac[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 13:55:03 2024 +0200
+
+    Implemented buttons to choose rock, paper or scissor
+
+[33mcommit e6a9c5e9f96e08c4261326a9aae6a482e6412a24[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 13:36:49 2024 +0200
+
+    Cleaned code
+
+[33mcommit 43ac0af1f53470562f6c4a9ae72c99ac50b0ebd6[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Fri Jul 5 13:27:31 2024 +0200
+
+    Moved script to external file and deleted 5 rounds play logic
+
+[33mcommit 41a094094699e394f32176c48307d4e8c5946fb3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: BlairStChair <84326653+BlairStChair@users.noreply.github.com>
+Date:   Sat May 11 16:38:50 2024 +0200
+
+    Update README.md
+
+[33mcommit cb8164546c3d9e50bf709393c479df407b800961[m
+Author: BlairStChair <84326653+BlairStChair@users.noreply.github.com>
+Date:   Sat May 11 16:15:16 2024 +0200
+
+    Create README.md
+
+[33mcommit f74d61c2c47f9e06c467f04ce8f6142229d5ddf8[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Sat May 11 16:13:14 2024 +0200
+
+    Added option for ending game with draw
+
+[33mcommit d5867c69c282bfc98042a997e2becbe1af731472[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Sat May 11 16:04:22 2024 +0200
+
+    Finished the whole game!
+
+[33mcommit 5c912f27981f918ca09ae00edb115735975eb12e[m
+Author: BlairStChair <julia.z15@interia.pl>
+Date:   Sun May 5 23:07:26 2024 +0200
+
+    Finished writing at switch statement
