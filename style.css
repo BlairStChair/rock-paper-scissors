@@ -1,0 +1,138 @@
+html{
+    min-height: 100%;
+    background-color: white;
+    font-family: "Source Code Pro", monospace;
+}
+body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+h1{
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    color: white;
+}
+
+#rock{
+    width: 130px;
+    height: 70px;
+    border-style: none;
+    background-color: #3794ff;
+    border-radius: 5px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#rock:hover{
+    background-color: #5ea8fd;
+    color: rgb(44, 44, 44);
+}
+
+#rock:active{
+    background-color: #3794ff;
+}
+
+#paper{
+    width: 130px;
+    height: 70px;
+    border-style: none;
+    background-color: #0ed8c7;
+    border-radius: 5px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#paper:hover{
+    background-color: #49e9dc;
+    color: rgb(44, 44, 44);
+}
+
+#paper:active{
+    background-color: #0ed8c7;
+}
+
+#scissors{
+    width: 190px;
+    height: 70px;
+    border-style: none;
+    background-color: #F3C300;
+    border-radius: 5px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#scissors:hover{
+    background-color: #f3cd34;
+    color: rgb(44, 44, 44);
+}
+
+#scissors:active{
+    background-color: #F3C300;
+}
+
+#score{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.resultDiv{
+    font-weight: bold;
+}
+
+#choices, .finalScoreDiv, .winnerOrNotDiv{
+    text-align: center;
+    font-size: 20px;
+}
+
+.finalScoreDiv, .winnerOrNotDiv{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#footer{
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gitHubLink{
+    color: white;
+    text-decoration: none;
+}
+
+#gitHubLink:hover{
+    color:#0ed8c7;
+}
+

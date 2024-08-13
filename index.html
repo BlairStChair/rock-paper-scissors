@@ -3,10 +3,14 @@
     <head>
         <title>Rock-Paper-Scissors</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
     <div id="container">
-        <h1>Welcome! Let's play.</br>Choose: paper, rock or scissors</h1>
+        <h1>Welcome! Let's play.</br>Choose: <span style="color: #2E6DB4;">rock</span>, <span style="color: #00AC9F;">paper</span> or <span style="color: #F3C300;">scissors</span></h1>
  
     <div id="buttons">
         <button id="rock">Rock</button>
@@ -14,12 +18,16 @@
         <button id="scissors">Scissors</button>
     </div>
     
-    <div id="choices"></div>
     <div id="score">
-        Player: <p id="playerScore"></p> Computer: <p id="machineScore"></p>
+        <p id="playerScore">Player</p><p id="machineScore">Computer</p>
     </div>
+
+    <div id="choices"></div>
+    
     <div id="endOfGameResult"></div>
     <script src="script.js"></script>
     </div>
+
+    <div id="footer"><div id="insideFooter"><p>Designed by <a href="https://github.com/BlairStChair" id="gitHubLink">BlairStChair</a></p></div></div>
     </body>
 </html>
